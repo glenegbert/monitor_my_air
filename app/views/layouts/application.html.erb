@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Monitor My Air</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+    <%= csrf_meta_tags %>
+    <script src="/assets/masonry.pkgd.min.js"></script>
+    <script src="/assets/imagesloaded.pkgd.min.js"></script>
+  </head>
+  <body data-no-turbolink='true'>
+    <div id="main-header">
+    <%= render "partials/header" %>
+    </div>
+<%= yield %>
+
+</body>
+  <footer>
+  </footer>
+</html>

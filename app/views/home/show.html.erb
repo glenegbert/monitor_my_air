@@ -1,0 +1,14 @@
+<div id="reports_form">
+  <%= bootstrap_form_tag url: reports_path do |f| %>
+    <%= f.text_field :zip_code, value: 'Enter Your Zip Code' %>
+    <%= f.form_group :skill_level, label: { text: "Health Concern Categories" }, help: "Select Categories That Apply to You" do %>
+      <%= f.check_box :lung_disease, label: "Asthma or other Lung Disease" %>
+      <%= f.check_box :heart_disease, label: "Heart Disease" %>
+      <%= f.check_box :children, label: "Children (with no specific health concern)" %>
+      <%= f.check_box :older_adult, label: "Older Adults (with no specific health concern)" %>
+      <%= f.check_box :active_outdoors, label: "Active Outdoors (with no specific health concern)" %>
+      <%= f.check_box :general_population, label: "General Population (with no specific health concern)" %>
+    <% end %>
+    <%= f.submit "Submit", class: "btn btn-success" %>
+  <% end %>
+</div>
