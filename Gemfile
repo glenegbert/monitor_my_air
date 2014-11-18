@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 group :test, :development do
   gem "rspec-rails"
+  gem "faraday", '~> 0.9.0'
+  gem 'pry'
 end
 
 group :test do
@@ -24,3 +26,4 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bootstrap_form'
 gem "twitter-bootstrap-rails"
+gem "faraday", '~> 0.9.0'
