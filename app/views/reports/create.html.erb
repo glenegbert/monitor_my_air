@@ -1,1 +1,50 @@
-<h3> The current ozone for <%= @report.ozone_reporting_area %> is <%= @report.current_ozone_value %>. <h3>
+<div id="reports_form">
+  <%= bootstrap_form_tag url: reports_path do |f| %>
+    <%= f.text_field :zip_code %>
+    <%= f.form_group :skill_level, label: { text: "Health Concern Categories" }, help: "Select Categories That Apply to You" do %>
+      <%= f.check_box :lung_disease, label: "Asthma or other Lung Disease" %>
+      <%= f.check_box :heart_disease, label: "Heart Disease" %>
+      <%= f.check_box :children, label: "Children (with no specific health concern)" %>
+      <%= f.check_box :older_adult, label: "Older Adults (with no specific health concern)" %>
+      <%= f.check_box :active_outdoors, label: "Active Outdoors (with no specific health concern)" %>
+      <%= f.check_box :general_population, label: "General Population (with no specific health concern)" %>
+    <% end %>
+    <%= f.submit "Submit", class: "btn btn-success" %>
+  <% end %>
+</div>
+
+<h3> Air Quality Report For <%= @report.reporting_area %> </h3>
+<p> Current Reported Conditions </p>
+  <% if @report.observed_contaminates_and_levels.empty? %>
+    <p> No observations have been reported </p>
+  <%  else %>
+   <% @report.observed_contaminates_and_levels.each do |contaminate, level| %>
+  <p>   <%= contaminate %> = <%= level %> </p>
+    <% end %>
+  <% end %>
+<p> Forecast Conditions For Tomorrow </p>
+  <% if @report.forecasted_contaminates_and_levels.empty? %>
+    <p> No forecast has been reported for this area </p>
+  <%  else %>
+    <%  @report.forecasted_contaminates_and_levels.each do |contaminate, level| %>
+      <p><%= contaminate %> = <%= level %> </p>
+    <% end %>
+  <% end %>
+<h3 Your Warnings
+<p> Based on the information provided by reporting agencies in your area and these health
+  concerns:
+    <% @concerns.each do |concern| %>
+      <% if concern == @concerns.last && @concerns.count > 1 %>
+        and <%= concern %>.
+      <% elsif @concerns.count > 1 %>
+        <%= concern %>,
+      <% else %>
+        <%= concern %>.
+      <% end %>
+    <% end %>
+
+</p>
+<strong>Today </strong>
+<p> You are likely/unlikely(@outcome) to experience health effects as a result of air quality <p>
+<strong> Tomorrow </strong>
+<p> You are likely/unlikely (@outcome to experience health effects as a result of air quality <p>

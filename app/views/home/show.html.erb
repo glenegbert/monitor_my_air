@@ -1,6 +1,6 @@
 <div id="reports_form">
   <%= bootstrap_form_tag url: reports_path do |f| %>
-    <%= f.text_field :zip_code, value: 'Enter Your Zip Code' %>
+    <%= f.text_field :zip_code %>
     <%= f.form_group :skill_level, label: { text: "Health Concern Categories" }, help: "Select Categories That Apply to You" do %>
       <%= f.check_box :lung_disease, label: "Asthma or other Lung Disease" %>
       <%= f.check_box :heart_disease, label: "Heart Disease" %>

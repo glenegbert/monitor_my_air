@@ -1,4 +1,5 @@
 require 'json'
+require 'date'
 
 class Report
 
@@ -6,31 +7,42 @@ class Report
     @zip_code = zip_code
   end
 
-  def current_observed
+  def forecast
+    tomorrow = Date.today + 1
+    Faraday.get("http://www.airnowapi.org/aq/forecast/zipCode/?format=application/json&zipCode=#{@zip_code}&date=#{tomorrow.strftime('%Y-%m-%d')}&distance=100&API_KEY=6262A4E6-45AF-4316-8485-CB1A259D7231")
+  end
+
+  def observed
     Faraday.get("http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=#{@zip_code}&distance=25&API_KEY=6262A4E6-45AF-4316-8485-CB1A259D7231")
   end
 
-  def current_ozone_value
-    JSON.parse(current_observed.body)[0]["Category"]["Number"]
+  def forecasted_levels
+    JSON.parse(forecast.body).map {|data| data["Category"]["Name"]}
   end
 
-  def current_particulate_value
-    JSON.parse(current_observed.body)[0]["Category"]["Number"]
+  def forecasted_contaminates
+    JSON.parse(forecast.body).map {|data| data["ParameterName"]}
   end
 
-  def ozone_reporting_area
-    JSON.parse(current_observed.body)[0]["ReportingArea"]
+  def forecasted_contaminates_and_levels
+    Hash[forecasted_contaminates.zip forecasted_levels]
   end
 
-  def particulate_reporting_area
-    JSON.parse(current_observed.body)[1]["Category"]
+  def observed_levels
+    JSON.parse(observed.body).map {|data| data["Category"]["Name"]}
   end
 
-  def current_ozone_category
-    JSON.parse(current_observed.body)[0]["Category"]["Name"]
+  def observed_contaminates
+    JSON.parse(observed.body).map {|data| data["ParameterName"]}
   end
 
-  def current_particulate_category
-    JSON.parse(current_observed.body)[0]["Category"]["Name"]
+  def observed_contaminates_and_levels
+    Hash[observed_contaminates.zip observed_levels]
   end
+
+  def reporting_area
+    JSON.parse(observed.body)[0]["ReportingArea"]
+  end
+
+
 end
