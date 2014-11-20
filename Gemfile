@@ -4,6 +4,7 @@ group :test, :development do
   gem "rspec-rails"
   gem "faraday", '~> 0.9.0'
   gem 'pry'
+  gem  'launchy'
 end
 
 group :test do
