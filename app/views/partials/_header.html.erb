@@ -2,6 +2,9 @@
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, class: "alert alert-info" %>
 <% end %>
+  <div id="logo">
+    <h3> MONITOR MY AIR </h3>
+  </div>
   <div id="account">
       <% if current_user %>
       <%= link_to "Logout", logout_path, id: "logout", method: 'delete' %>
