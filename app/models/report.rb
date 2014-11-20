@@ -1,5 +1,3 @@
-require 'json'
-require 'date'
 
 class Report
 

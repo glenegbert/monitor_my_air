@@ -1,2 +1,12 @@
 <nav class="navbar navbar-default" role="navigation", id="navbar">
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, class: "alert alert-info" %>
+<% end %>
+  <div id="account">
+      <% if current_user %>
+      <%= link_to "Logout", logout_path, id: "logout", method: 'delete' %>
+      <% else %>
+      <%= link_to "Login With Twitter", login_path, id: "login" %>
+    <% end %>
+  </div>
 </nav>
