@@ -110,11 +110,7 @@ class Report
     else
       contaminates_aqis = forecasted_contaminates_and_aqi_values
     end
-    present_condition_indicators = contaminates_aqis.keys.map do |contaminate|
-      if condition_indicators.include?(contaminate)
-        contaminate
-      end
-    end.compact
+    present_condition_indicators = contaminates_aqis.keys & condition_indicators
     present_condition_indicators.any?{|indicator| contaminates_aqis[indicator] > 100} ||
     red_zone?(day)
   end
