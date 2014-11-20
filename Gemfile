@@ -29,3 +29,4 @@ gem "twitter-bootstrap-rails"
 gem "faraday", '~> 0.9.0'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'therubyracer'

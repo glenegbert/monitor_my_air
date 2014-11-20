@@ -56,7 +56,7 @@ class Report
   end
 
   def forecasted_contaminates_and_aqi_values
-    Hash[observed_contaminates.zip forecasted_aqi_values]
+    Hash[forecasted_contaminates.zip forecasted_aqi_values]
   end
 
   def observed_contaminates_and_aqi_values
@@ -115,7 +115,7 @@ class Report
         contaminate
       end
     end.compact
-    present_condition_indicators.any?{|indicator| observed_contaminates_and_aqi_values[indicator] > 100} ||
+    present_condition_indicators.any?{|indicator| contaminates_aqis[indicator] > 100} ||
     red_zone?
   end
 
