@@ -53,7 +53,7 @@
     end %>
 <p> You are <%= outcome %> to experience health effects as a result of air quality. <p>
 <strong> Tomorrow </strong>
-<%  if @report.health_effects?("today") == true
+<%  if @report.health_effects?("tomorrow") == true
       outcome = "likely"
     else
       outcome = "unlikely"

@@ -15,12 +15,20 @@ class Report
     Faraday.get("http://www.airnowapi.org/aq/observation/zipCode/current/?format=application/json&zipCode=#{@zip_code}&distance=25&API_KEY=6262A4E6-45AF-4316-8485-CB1A259D7231")
   end
 
+  def parsed_forecast
+    JSON.parse(forecast.body)
+  end
+
+  def parsed_observed
+    JSON.parse(observed.body)
+  end
+
   def forecasted_levels
-    JSON.parse(forecast.body).map {|data| data["Category"]["Name"]}
+    parsed_forecast.map {|data| data["Category"]["Name"]}
   end
 
   def forecasted_contaminates
-    JSON.parse(forecast.body).map {|data| data["ParameterName"]}
+    parsed_forecast.map {|data| data["ParameterName"]}
   end
 
   def forecasted_contaminates_and_levels
@@ -28,11 +36,11 @@ class Report
   end
 
   def observed_levels
-    JSON.parse(observed.body).map {|data| data["Category"]["Name"]}
+    parsed_observed.map {|data| data["Category"]["Name"]}
   end
 
   def observed_contaminates
-    JSON.parse(observed.body).map {|data| data["ParameterName"]}
+    parsed_observed.map {|data| data["ParameterName"]}
   end
 
   def observed_contaminates_and_levels
@@ -40,7 +48,15 @@ class Report
   end
 
   def observed_aqi_values
-    JSON.parse(observed.body).map {|data| data["AQI"]}
+    parsed_observed.map {|data| data["AQI"]}
+  end
+
+  def forecasted_aqi_values
+    parsed_forecast.map {|data| data["AQI"]}
+  end
+
+  def forecasted_contaminates_and_aqi_values
+    Hash[observed_contaminates.zip forecasted_aqi_values]
   end
 
   def observed_contaminates_and_aqi_values
@@ -48,7 +64,7 @@ class Report
   end
 
   def reporting_area
-    JSON.parse(observed.body)[0]["ReportingArea"]
+    parsed_observed[0]["ReportingArea"]
   end
 
   def clean_checked_concerns
@@ -88,15 +104,14 @@ class Report
     red_zone?
   end
 
-
-  def alert?(condition_indcators, day)
+  def alert?(condition_indicators, day)
     if day == "today"
       contaminates_aqis = observed_contaminates_and_aqi_values
     else
       contaminates_aqis = forecasted_contaminates_and_aqi_values
     end
     present_condition_indicators = contaminates_aqis.keys.map do |contaminate|
-      if condition_indcators.include?(contaminate)
+      if condition_indicators.include?(contaminate)
         contaminate
       end
     end.compact
