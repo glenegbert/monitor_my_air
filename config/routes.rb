@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#show'
+  root 'home#index'
   resources :home
   resources :reports
   get '/auth/twitter/callback', to: 'sessions#create'

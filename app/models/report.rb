@@ -101,7 +101,7 @@ class Report
   end
 
   def general_population?(day)
-    red_zone?
+    red_zone?(day)
   end
 
   def alert?(condition_indicators, day)
@@ -116,11 +116,15 @@ class Report
       end
     end.compact
     present_condition_indicators.any?{|indicator| contaminates_aqis[indicator] > 100} ||
-    red_zone?
+    red_zone?(day)
   end
 
-  def red_zone?
-    observed_contaminates_and_aqi_values.values.any? {|value| value > 150}
+  def red_zone?(day)
+    if day == "today"
+      observed_contaminates_and_aqi_values.values.any? {|value| value > 150}
+    else
+      forecasted_contaminates_and_aqi_values.values.any? {|value| value > 150}
+    end
   end
 
   def health_effects?(day)

@@ -3,7 +3,19 @@ require 'rails_helper'
 
 RSpec.describe Report, :type => :model do
   let(:report) do
-    Report.new("80228",[])
+    Report.new("80228",{
+               "utf8"=>"✓",
+               "authenticity_token"=>"uLsBZ4fGAxNJY3+y+ysuJ5/omt7ysQtjvfhU5aLnMqA=",
+               "zip_code"=>"80228",
+               "lung_disease"=>"0",
+               "heart_disease"=>"0",
+               "children"=>"1",
+               "older_adult"=>"0",
+               "active_outdoors"=>"1",
+               "general_population"=>"0",
+               "commit"=>"Submit",
+               "action"=>"create",
+               "controller"=>"reports"})
   end
 
   before :each do
@@ -71,6 +83,54 @@ RSpec.describe Report, :type => :model do
   end
 
   describe 'returns health concern data' do
-      it 'returns cleaned'
+      it 'returns cleaned checked concerns' do
+        expect(report.clean_checked_concerns).to include("children", "active outdoors")
+        expect(report.clean_checked_concerns).to_not include("create")
+      end
+
+      it 'returns checked concerns with underscores' do
+        expect(report.checked_concerns).to include("children", "active_outdoors")
+        expect(report.checked_concerns).to_not include("create")
+      end
+
+      it 'checks for lung disease alerts based on the date' do
+        expect(report.lung_disease?("today")).to be false
+        expect(report.lung_disease?("tomorrow")).to be true
+      end
+
+      it 'checks for heart_disease alerts based on the date' do
+        expect(report.heart_disease?("today")).to be false
+        expect(report.heart_disease?("tomorrow")).to be true
+      end
+
+      it 'checks for children alerts based on the date' do
+        expect(report.children?("today")).to be false
+        expect(report.children?("tomorrow")).to be true
+      end
+
+      it 'checks for older_adult alerts based on the date' do
+        expect(report.older_adult?("today")).to be false
+        expect(report.older_adult?("tomorrow")).to be true
+      end
+
+      it 'checks for active_outdoors alerts based on the date' do
+        expect(report.active_outdoors?("today")).to be false
+        expect(report.active_outdoors?("tomorrow")).to be true
+      end
+
+      it 'checks for general_population alerts based on the date' do
+        expect(report.general_population?("today")).to be false
+        expect(report.general_population?("tomorrow")).to be true
+      end
+
+      it 'checks if there is any AQI levels are in the red zone' do
+        expect(report.red_zone?("today")).to be false
+        expect(report.red_zone?("tomorrow")).to be true
+      end
+
+      it 'checks if there are likely health effects for the checked params' do
+        expect(report.health_effects?("today")).to be false
+        expect(report.health_effects?("tomorrow")).to be true
+      end
   end
 end
