@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
   resources :home
   resources :reports
+  resources :notifications
   get '/auth/twitter/callback', to: 'sessions#create'
   resource :sessions, :only => [:create]
   delete "/logout" => "sessions#destroy", as: :logout
