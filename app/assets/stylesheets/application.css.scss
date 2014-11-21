@@ -16,3 +16,18 @@
 /*
  *= require rails_bootstrap_forms
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.navbar {
+  background-image: url('http://performancegrowthadvisors.com/wp-content/themes/flexibility3/images/headers/header-BlueSky.jpg');
+  min-height: 167px;
+  background-size:110% 167px;
+  margin-right: -20px;
+
+  #logo {
+  margin:auto;
+  width: 28%;
+  margin-top: 40px;
+  }
+}
