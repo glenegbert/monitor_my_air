@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121231356) do
+ActiveRecord::Schema.define(version: 20141123160752) do
+
+  create_table "conditions", force: true do |t|
+    t.string "name"
+  end
+
+  create_table "conditions_notifications", id: false, force: true do |t|
+    t.integer "condition_id"
+    t.integer "notification_id"
+  end
 
   create_table "notifications", force: true do |t|
     t.integer  "user_id"

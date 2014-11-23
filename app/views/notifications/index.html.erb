@@ -1,1 +1,7 @@
-Yo
+<h3> Your Notifications <h3>
+
+<%= form_tag new_notification_path, method: :get do %>
+<%= button_tag(:class => "btn btn-info btn-sm", :id => "new-notification-button") do %>
+   Create a New Notification
+  <% end %>
+<% end %>
