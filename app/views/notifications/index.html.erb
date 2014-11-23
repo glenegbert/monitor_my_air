@@ -1,5 +1,26 @@
 <h3> Your Notifications <h3>
 
+
+<table class="table table-hover table-bordered table-striped table-condensed">
+  <th> Name </th>
+  <th> Email </th>
+  <th> Phone Number </th>
+  <th> Zip Code </th>
+  <th> Health Concerns </th>
+  <% @notifications.each do |notification| %>
+  <tr>
+    <td> <%= notification.name %> </td>
+    <td> <%= notification.email %> </td>
+    <td> <%= notification.phone_number %> </td>
+    <td> <%= notification.zip_code %> </td>
+    <td> <% notification.conditions.each do |condition| %>
+         <%= condition.name %>
+         <% end %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+
 <%= form_tag new_notification_path, method: :get do %>
 <%= button_tag(:class => "btn btn-info btn-sm", :id => "new-notification-button") do %>
    Create a New Notification

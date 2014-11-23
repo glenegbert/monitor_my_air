@@ -1,6 +1,7 @@
 class NotificationsController < ApplicationController
 
   def index
+    @notifications = Notification.where(user_id: current_user.id)
   end
 
   def new
@@ -10,6 +11,8 @@ class NotificationsController < ApplicationController
   def create
     @notification = Notification.create(notification_params)
     set_conditions(params)
+    @notification.user_id = current_user.id
+    @notification.save
     redirect_to notifications_path
   end
 
