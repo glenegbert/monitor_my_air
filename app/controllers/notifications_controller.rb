@@ -17,6 +17,22 @@ class NotificationsController < ApplicationController
     redirect_to notifications_path
   end
 
+  def destroy
+    notification = current_user.notifications.find(params[:id])
+    notification.destroy
+    redirect_to notifications_path
+  end
+
+  def update
+    @notification = current_user.notifications.find(params[:id])
+    @notifiation.update(notification_params)
+    redirect_to notifications_path
+  end
+
+  def edit
+    @notification = current_user.notifications.find(params[:id])
+  end
+
   private
 
   def notification_params
