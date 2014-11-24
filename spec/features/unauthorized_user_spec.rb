@@ -20,7 +20,7 @@ describe 'As a Public User', type: :feature do
       expect(page).to have_css('.notifications-btn')
     end
 
-    it 'has a create notifications button' do
+    it 'has a create historical data button' do
       expect(page).to have_css('.historical-data-btn')
        page.fill_in('Zip code', with: "80228")
        find(:css, "#_children[value='1']").set(true)
