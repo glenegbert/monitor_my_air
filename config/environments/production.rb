@@ -77,9 +77,9 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   ActionMailer::Base.smtp_settings = {
-    :user_name => ENV['SENDGRID_USERNAME'],
-    :password => ENV['SENDGRID_PASSWORD'],
-    :domain => 'yourdomain.com',
+    :user_name => Rails.application.secrets.sendgrid_username,
+    :password => Rails.application.secrets.sendgrid_password,
+    :domain => 'localhost:3000',
     :address => 'smtp.sendgrid.net',
     :port => 587,
     :authentication => :plain,

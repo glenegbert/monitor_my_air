@@ -1,6 +1,6 @@
 class TextSender
 
-  def self.test_text(phone_number, message)
+  def self.send_text(phone_number, message)
 
     account_sid = Rails.application.secrets.account_sid
     auth_token = Rails.application.secrets.auth_token

@@ -38,8 +38,8 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   ActionMailer::Base.smtp_settings = {
-    :user_name => 'glenegbert',
-    :password => 'Sevaandlily1',
+    :user_name => Rails.application.secrets.sendgrid_username,
+    :password => Rails.application.secrets.sendgrid_password,
     :domain => 'localhost:3000',
     :address => 'smtp.sendgrid.net',
     :port => 587,
