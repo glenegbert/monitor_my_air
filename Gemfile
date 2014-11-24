@@ -10,7 +10,6 @@ end
 group :test do
   gem "capybara"
   gem 'poltergeist'
-  gem 'launchy'
   gem 'database_cleaner'
   gem "codeclimate-test-reporter", require: nil
 end
@@ -32,3 +31,4 @@ gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'therubyracer'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'twilio-ruby', '~> 3.12'

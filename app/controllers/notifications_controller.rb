@@ -13,7 +13,6 @@ class NotificationsController < ApplicationController
     set_conditions(params)
     @notification.user_id = current_user.id
     @notification.save
-    UserNotifier.send_notification_email(@notification).deliver
     redirect_to notifications_path
   end
 
