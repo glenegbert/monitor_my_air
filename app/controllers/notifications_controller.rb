@@ -13,7 +13,14 @@ class NotificationsController < ApplicationController
     set_conditions(params)
     @notification.user_id = current_user.id
     @notification.save
-    UserNotifier.notification_creation_email(@notification).deliver
+    if @notification.email.length > 0 && @notification.phone_number
+      UserNotifier.notification_creation_email(@notification).deliver
+      TextSender.send_notification_creation_text(@notification)
+    elsif @notification.email.length > 0
+      UserNotifier.notification_creation_email(@notification).deliver
+    else
+      TextSender.send_notification_creation_text(@notification)
+    end
     redirect_to notifications_path
   end
 

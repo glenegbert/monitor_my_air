@@ -4,10 +4,10 @@ class UserNotifier < ActionMailer::Base
   def notification_creation_email(notification)
     @notification = notification
     mail( :to => @notification.email,
-    :subject => 'Welcome to Monitor My Air' )
+    :subject => 'You Have Created a Monitor My Air Notification' )
   end
 
-  def send_notification_email(notification)
+  def notification_email(notification)
     @notification = notification
     mail( :to => @notification.email,
     :subject => 'This is a notification' )
