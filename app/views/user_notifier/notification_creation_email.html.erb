@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <h1>Thank you for signing up for Monitor My Air!</h1>
+  <p>You will get notifications at this email address whenever current of forecasted
+    air quality in zip code <%= @notification.zip_code %> is likely to aggravate the following
+    health conditions:
+    <ul>
+      <% @notification.conditions.each do |condition| %>
+      <li> <%= condition.name %></li>
+      <% end %>
+    </ul>
+   </p>
+  </body>
+  </html>
