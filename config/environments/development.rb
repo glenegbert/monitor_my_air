@@ -38,18 +38,14 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   ActionMailer::Base.smtp_settings = {
-    :user_name => ENV['SENDGRID_USERNAME'],
-    :password => ENV['SENDGRID_PASSWORD'],
+    :user_name => "dopethreads5280@gmail.com",
+    :password => "52805280",
     :domain => 'yourdomain.com',
-    :address => 'smtp.sendgrid.net',
+    :address => 'smtp.gmail.com',
     :port => 587,
     :authentication => :plain,
     :enable_starttls_auto => true
   }
 
-  Twilio.configure do |config|
-    config.account_sid = ENV['ACCOUNT_SID']
-    config.auth_token = ENV['AUTH_TOKEN']
-  end
 
 end
