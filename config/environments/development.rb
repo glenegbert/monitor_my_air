@@ -38,8 +38,8 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   ActionMailer::Base.smtp_settings = {
-    :user_name => "dopethreads5280@gmail.com",
-    :password => "52805280",
+    :user_name => '',
+    :password => ',
     :domain => 'yourdomain.com',
     :address => 'smtp.gmail.com',
     :port => 587,
