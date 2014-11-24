@@ -1,5 +1,5 @@
 class UserNotifier < ActionMailer::Base
-  default from: "dopethreads5280@gmail.com"
+  default from: "glenegbert1@gmail.com"
 
   def send_notification_email(notification)
     @notification = notification
