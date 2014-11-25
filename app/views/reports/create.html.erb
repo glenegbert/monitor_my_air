@@ -70,13 +70,7 @@
         concerns:
           <% concerns = @report.clean_checked_concerns%>
           <% concerns.each do |concern| %>
-            <% if concern == concerns.last && concerns.count > 1 %>
-              and <%= concern %>.
-            <% elsif concerns.count > 1 %>
-              <%= concern %>,
-            <% else %>
-              <%= concern %>.
-            <% end %>
+            <%= concern %>
           <% end %>
 
       </p>

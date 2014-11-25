@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <h3>This is an Alert Notification From Monitor My Air!</h3>
+  <p> You are receiving this email because current or forecasted(tomorrow) air quality in zip code: <%= @notification.zip_code %> is
+    likely to aggravate these health conditions: <%= @notification.clean_conditions_message %> </p>
+
+    <p> See below for the complete report. </p>
+    <div id="report" class="col-xs-8 col-sm-6 col-md-5 .col-lg-5">
+      <h3> Air Quality Report For <%= @report.reporting_area %> </h3>
+      <strong> Current Reported Conditions </strong>
+      <% if @report.observed_contaminates_and_levels.empty? %>
+      <p> No observations have been reported </p>
+      <%  else %>
+      <% @report.observed_contaminates_and_levels.each do |contaminate, level| %>
+      <p>   <%= contaminate %> = <%= level %> </p>
+      <% end %>
+      <% end %>
+      <strong> Forecast Conditions For Tomorrow </strong>
+      <% if @report.forecasted_contaminates_and_levels.empty? %>
+      <p> No forecast has been reported for this area </p>
+      <%  else %>
+      <%  @report.forecasted_contaminates_and_levels.each do |contaminate, level| %>
+      <p><%= contaminate %> = <%= level %> </p>
+      <% end %>
+      <% end %>
+      <h3> Your Warnings </h3>
+      <p> Based on the information provided by reporting agencies in your area and these health
+        concerns: <%= @notification.clean_conditions_message  %>
+
+      </p>
+      <strong>Today </strong>
+      <%  if @report.health_effects?("today") == true
+      outcome = "likely"
+      else
+      outcome = "unlikely"
+      end %>
+      <p> You are <%= outcome %> to experience health effects as a result of air quality. <p>
+        <strong> Tomorrow </strong>
+        <%  if @report.health_effects?("tomorrow") == true
+        outcome = "likely"
+        else
+        outcome = "unlikely"
+        end %>
+        <p> You are <%= outcome %> to experience health effects as a result of air quality. <p>
+        </div>
+  </p>
+</body>
+</html>

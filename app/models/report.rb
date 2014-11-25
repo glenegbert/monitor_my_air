@@ -68,7 +68,17 @@ class Report
   end
 
   def clean_checked_concerns
-    checked_concerns.map {|concern| concern.gsub("_", " ")}
+    concerns = checked_concerns.map {|concern| concern.gsub("_", " ")}
+    concerns.map do |concern|
+      if concern == concerns.last && concerns.count > 1
+        "and #{concern}."
+      elsif concerns.count > 1
+         concern + ","
+      else
+         concern + "."
+      end
+    end
+    concerns.join(" ")
   end
 
   def checked_concerns

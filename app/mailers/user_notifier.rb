@@ -7,9 +7,10 @@ class UserNotifier < ActionMailer::Base
     :subject => 'You Have Created a Monitor My Air Notification' )
   end
 
-  def notification_email(notification)
+  def notification_email(notification, report)
     @notification = notification
+    @report = report
     mail( :to => @notification.email,
-    :subject => 'This is a notification' )
+    :subject => 'Notification From MonitorMyAir.org' )
   end
 end
