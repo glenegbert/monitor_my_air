@@ -1,6 +1,7 @@
 class Notifier
 
-  def self.send_notifications(notifications)
+  def self.send_notifications
+    notifications = Notification.all
     notifications.each do |notification|
       params = Hash[notification.conditions.map{|condition| [condition.name, "1"]}]
       @report = Report.new(notification.zip_code, params)
