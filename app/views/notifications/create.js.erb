@@ -1,0 +1,3 @@
+$('#notifications-index table').append("<%= escape_javascript(render :template => 'notifications/_table', :locals => { :notification => @notification }) %>")
+
+$('#notifications-index').show()

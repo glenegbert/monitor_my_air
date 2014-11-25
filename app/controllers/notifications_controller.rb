@@ -1,7 +1,9 @@
 class NotificationsController < ApplicationController
+  respond_to :html, :js
 
   def index
     @notifications = Notification.where(user_id: current_user.id)
+    @notification = Notification.new
   end
 
   def new
@@ -21,7 +23,6 @@ class NotificationsController < ApplicationController
     else
       TextSender.send_notification_creation_text(@notification)
     end
-    redirect_to notifications_path
   end
 
   def destroy
@@ -32,7 +33,7 @@ class NotificationsController < ApplicationController
 
   def update
     @notification = current_user.notifications.find(params[:id])
-    @notifiation.update(notification_params)
+    @notification.update(notification_params)
     redirect_to notifications_path
   end
 

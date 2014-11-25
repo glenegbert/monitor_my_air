@@ -1,0 +1,19 @@
+<tr>
+<td> <%= notification.name %> </td>
+<td> <%= notification.email %> </td>
+<td> <%= notification.phone_number %> </td>
+<td> <%= notification.zip_code %> </td>
+<td> <%= notification.clean_conditions %></td>
+<td>
+  <%= form_tag notification_path(notification), method: :delete do %>
+  <%= button_tag(:class => "btn btn-success btn-sm") do %>
+  Delete
+  <% end %>
+  <% end %>
+  <%= form_tag edit_notification_path(notification), method: :get do %>
+  <%= button_tag(:class => "btn btn-success btn-sm") do %>
+  Edit
+  <% end %>
+  <% end %>
+</td>
+</tr>

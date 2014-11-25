@@ -1,6 +1,6 @@
 
 <div id = "notifications-form">
-<%= bootstrap_form_for(@notification) do |f| %>
+<%= bootstrap_form_for(@notification, remote: true) do |f| %>
       <%= f.text_field :name %>
       <%= f.text_field :zip_code %>
       <%= f.text_field :email %>
