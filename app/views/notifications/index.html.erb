@@ -14,10 +14,7 @@
     <td> <%= notification.email %> </td>
     <td> <%= notification.phone_number %> </td>
     <td> <%= notification.zip_code %> </td>
-    <td> <% notification.conditions.each do |condition| %>
-         <%= condition.name %>
-         <% end %>
-    </td>
+    <td> <%= notification.clean_conditions %></td>
     <td>
       <%= form_tag notification_path(notification), method: :delete do %>
       <%= button_tag(:class => "btn btn-success btn-sm", :id => "new-notification-button") do %>

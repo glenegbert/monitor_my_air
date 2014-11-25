@@ -3,6 +3,11 @@ class Notification < ActiveRecord::Base
   has_and_belongs_to_many :conditions
 
 
+  def clean_conditions
+    self.conditions.map{|condition| condition.name.gsub("_"," ")}.join(", ")
+
+  end
+
   def clean_conditions_message
     concerns= self.conditions.map{|condition| condition.name.gsub("_"," ")}
     message = concerns.map do |concern|

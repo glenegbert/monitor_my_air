@@ -67,11 +67,8 @@
         <% end %>
       <h3> Your Warnings </h3>
       <p> Based on the information provided by reporting agencies in your area and these health
-        concerns:
-          <% concerns = @report.clean_checked_concerns%>
-          <% concerns.each do |concern| %>
-            <%= concern %>
-          <% end %>
+        concerns:  <%= @report.clean_checked_concerns%>
+
 
       </p>
       <strong>Today </strong>
