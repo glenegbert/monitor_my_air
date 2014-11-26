@@ -11,18 +11,19 @@ class NotificationsController < ApplicationController
   end
 
   def create
-    @notification = Notification.create(notification_params)
+    @new_notification = Notification.create(notification_params)
     set_conditions(params)
-    @notification.user_id = current_user.id
-    @notification.save
-    if @notification.email.length > 0 && @notification.phone_number
-      UserNotifier.notification_creation_email(@notification).deliver
-      TextSender.send_notification_creation_text(@notification)
-    elsif @notification.email.length > 0
-      UserNotifier.notification_creation_email(@notification).deliver
+    @new_notification.user_id = current_user.id
+    @new_notification.save
+    if @new_notification.email.length > 0 && @new_notification.phone_number
+      UserNotifier.notification_creation_email(@new_notification).deliver
+      TextSender.send_notification_creation_text(@new_notification)
+    elsif @new_notification.email.length > 0
+      UserNotifier.notification_creation_email(@new_notification).deliver
     else
-      TextSender.send_notification_creation_text(@notification)
+      TextSender.send_notification_creation_text(@new_notification)
     end
+    @notification = Notification.new
   end
 
   def destroy
@@ -49,7 +50,7 @@ class NotificationsController < ApplicationController
 
   def set_conditions(params)
     condition_ids = params["notification"]["condition_ids"][1..-1]
-    @notification.conditions = condition_ids.map do |id|
+    @new_notification.conditions = condition_ids.map do |id|
       Condition.find(id)
     end
   end
