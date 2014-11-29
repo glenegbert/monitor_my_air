@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Monitor My Air</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -9,21 +10,19 @@
 
     <%= csrf_meta_tags %>
   </head>
-  <div id="page">
+
 
     <body data-no-turbolink='true'>
-
-
-      <div id="main-header">
-      <%= render "partials/header" %>
-      </div>
+      dog
+      dog
+    </br>
+    dog
 
       <%= yield %>
 
-     <script> $(function () {
+      <script> $(function () {
         $('[data-toggle="popover"]').popover()
-        }) </script>
+      }) </script>
 
-     </body>
- </div>
+    </body>
 </html>

@@ -1,9 +1,19 @@
 #reports_form {
 
-  #zip-code{
+  #zip-code {
     width: 150px;
+    margin:auto;
   }
+
+  #health-concerns {
+
+  }
+padding-left: 10px;
+padding-bottom: 10px;
+background-color: white;
 line-height: 1.8;
+background:rgba(255,255,255,0.2);
+border-radius: 10px;
 }
 
 #notifications-form {
@@ -29,11 +39,4 @@ line-height: 1.8;
 #notifications-index {
   width: 80%;
   margin: auto;
-}
-
-#page {
-  background-image: url('http://api.ning.com/files/w3eiFFRDzzdCH93QopFipKQ1gig3pdpkO9xGpMhjKwyEh16bQ*kcyYxfhTMvM33z6VLYwU8qJHtcfLDWMoWIADe-AphnwwR7/SkyBlueSky.jpg');
-  margin-bottom: 0;
-  background-repeat:no-repeat;
-  background-size:100% 100%;
 }

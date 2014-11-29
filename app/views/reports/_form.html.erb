@@ -2,6 +2,7 @@
   <div id="zip-code">
     <%= f.text_field :zip_code %>
   </div>
+  <div id="health-concerns"
   <%= f.form_group :checked_concerns, label: { text: "Health Concern Categories" } do %>
     <label><%= check_box_tag :lung_disease, "1", params[:lung_disease] %>
       Asthma or other Lung Disease</label><br>
@@ -15,6 +16,8 @@
       Active Outdoors</label><br>
     <label><%= check_box_tag :general_population, "1", params[:general_population] %>
       General Population </label><br>
+
   <% end %>
   <%= f.submit "Submit", class: "btn btn-success", id: "rbtn" %>
 <% end %>
+  </div>
