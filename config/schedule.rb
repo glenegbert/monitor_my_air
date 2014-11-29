@@ -20,8 +20,8 @@
 # Learn more: http://github.com/javan/whenever
 
 set :environment, "development"
-set :output, {:error => "./log/cron_error_log.log", :standard => "./log/cron_log.log"}
+set :output, {:error => "/Users/glenegbert/Dropbox/ruby_projects/monitor_my_air/log/cron_error_log.log", :standard => "/Users/glenegbert/Dropbox/ruby_projects/monitor_my_air/log/cron_log.log"}
 
-every :day, :at => '5:00am' do
-  runner "Notifier.send_notifications"
-end
+# every 1.minute do
+#   runner "Notifier.send_notifications"
+# end

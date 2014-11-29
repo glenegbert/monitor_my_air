@@ -1,9 +1,18 @@
 
 class Report
 
-  def initialize(zip_code, params)
+  include ActiveModel::Model
+
+  attr_accessor :zip_code, :checked_concerns
+
+  validates_presence_of :zip_code
+  validates_presence_of :checked_concerns
+
+
+  def initialize(zip_code=nil, params={})
     @zip_code = zip_code
-    @params = params
+    @checked_concerns = params.map {|concern, value| concern if value == "1"}.compact
+
   end
 
   def forecast
@@ -81,9 +90,7 @@ class Report
     concerns.join(" ")
   end
 
-  def checked_concerns
-    checked_concerns = @params.map {|concern, value| concern if value == "1"}.compact
-  end
+
 
   def lung_disease?(day)
     condition_indicators = ["O3","PM2.5","PM10"]

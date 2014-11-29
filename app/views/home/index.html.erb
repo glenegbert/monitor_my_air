@@ -1,22 +1,28 @@
 <div class = ".container-fluid">
-  <div class = "row">
+  <div class = "row" id = "home-form">
     <div class="col-xs-2 col-sm-2 col-md-3 col-lg-4">
     </div>
     <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
       <div id="reports_form">
-      <%= bootstrap_form_tag url: reports_path do |f| %>
+      <%= bootstrap_form_for(@report) do |f| %>
         <div id="zip-code">
           <%= f.text_field :zip_code %>
         </div>
-        <%= f.form_group :skill_level, label: { text: "Health Concern Categories" }, help: "Select Categories That Apply to You" do %>
-          <%= f.check_box :lung_disease, label: "Asthma or other Lung Disease" %>
-          <%= f.check_box :heart_disease, label: "Heart Disease" %>
-          <%= f.check_box :children, label: "Children (with no specific health concern)" %>
-          <%= f.check_box :older_adult, label: "Older Adults (with no specific health concern)" %>
-          <%= f.check_box :active_outdoors, label: "Active Outdoors (with no specific health concern)" %>
-          <%= f.check_box :general_population, label: "General Population (with no specific health concern)" %>
+        <%= f.form_group :checked_concerns, label: { text: "Health Concern Categories" }, help: "Select Categories That Apply to You" do %>
+          <label><%= check_box_tag :lung_disease, "1", params[:lung_disease] %>
+            Asthma or other Lung Disease</label><br>
+          <label><%= check_box_tag :heart_disease, "1", params[:heart_disease] %>
+            Heart Disease</label><br>
+          <label><%= check_box_tag :children, "1", params[:children] %>
+            Children </label><br>
+          <label><%= check_box_tag :older_adult, "1", params[:older_adult] %>
+            Older Adult</label><br>
+          <label><%= check_box_tag :active_outdoors, "1", params[:active_outdoors] %>
+            Active Outdoors</label><br>
+          <label><%= check_box_tag :general_population, "1", params[:general_population] %>
+            General Population </label><br>
         <% end %>
-        <%= f.submit "Submit", class: "btn btn-success" %>
+        <%= f.submit "Submit", class: "btn btn-success", id: "rbtn" %>
       <% end %>
     </div>
   </br>
@@ -32,16 +38,5 @@
     <% end %>
     </div>
     <br>
-    <div>
-      <% if current_user %>
-          <%= form_tag reports_path, method: :get do %>
-          <%= button_tag(:class => "btn btn-info btn-sm historical-data-btn") do %>
-             See Historical Data
-            <% end %>
-        <% end %>
-      <% else %>
-        <button type="button" class="btn btn-sm btn-info historical-data-btn" data-toggle="popover" data-content="You must be logged in to see historical data.">See Historical Data</button>
-      <% end %>
-    </div>
   </div>
 </div>
