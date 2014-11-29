@@ -1,19 +1,16 @@
 #reports_form {
 
-  #zip-code {
-    width: 150px;
-    margin:auto;
+  #zip-code{
+    width: 120px;
   }
-
-  #health-concerns {
-
-  }
+margin-top: 50px;
 padding-left: 10px;
 padding-bottom: 10px;
-background-color: white;
 line-height: 1.8;
-background:rgba(255,255,255,0.3);
+background:rgba(150,220,255,0.6);
 border-radius: 10px;
+border: 1px dotted white;
+
 }
 
 #notifications-form {
@@ -26,11 +23,15 @@ border-radius: 10px;
 }
 
 #logo-header {
-width: 200px;
+margin-top: 40px;
+width: 571px;
 margin: auto;
   a {
-    color: black;
+    color: white;
   }
+font-size: 50px;
+font-family: 'Merriweather', serif;
+font-weight: 50px;
 }
 
 #new-notification-form {
@@ -41,4 +42,59 @@ margin: auto;
 #notifications-index {
   width: 80%;
   margin: auto;
+}
+
+#account {
+  color: white;
+}
+
+#nav-items {
+  min-height: 150px;
+}
+
+#account {
+  margin-left: 10px;
+}
+
+#notifications {
+  margin-left: 10px;
+}
+
+#report {
+  line-height: 1.8;
+  background:rgba(150,220,255,0.6);
+  border-radius: 10px;
+  border: 1px dotted white;
+  margin-top: 50px;
+}
+
+#notifications-index {
+  color:black;
+  background:rgba(150,220,255,0.6);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 20px;
+    .btn {
+      margin-top: 5px;
+      background-color: #191996;
+
+    }
+    table {
+      margin-bottom: 0;
+    }
+    td {
+      color: #4F4F4F;
+    }
+
+    th {
+      color: #404040
+    }
+    h3 {
+      margin: auto;
+      width:20%;
+      padding-bottom: 9px;
+      font-size: 25px;
+      color: black;
+    }
 }

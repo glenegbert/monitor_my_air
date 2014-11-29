@@ -1,13 +1,5 @@
 
-<% if current_user %>
-<%= form_tag notifications_path, method: :get do %>
-<%= button_tag(:class => "btn btn-info btn-sm notifications-btn") do %>
-Create Notifications
-<% end %>
-<% end %>
-<% else %>
-<button type="button" class="btn btn-sm btn-info notifications-btn" data-toggle="popover" data-content="You must be logged in to create notifications.">Create Notifications</button>
-<% end %>
+
 <div class = ".container-fluid">
   <div class = "row" id = "home-form">
     <div class="col-xs-2 col-sm-2 col-md-3 col-lg-4">
