@@ -9,15 +9,21 @@
 
     <%= csrf_meta_tags %>
   </head>
-  <body data-no-turbolink='true'>
-    <div id="main-header">
-    <%= render "partials/header" %>
-    </div>
-<%= yield %>
-<script> $(function () {
-  $('[data-toggle="popover"]').popover()
-}) </script>
-</body>
-  <footer>
-  </footer>
+  <div id="page">
+
+    <body data-no-turbolink='true'>
+
+
+      <div id="main-header">
+      <%= render "partials/header" %>
+      </div>
+
+      <%= yield %>
+
+     <script> $(function () {
+        $('[data-toggle="popover"]').popover()
+        }) </script>
+
+     </body>
+ </div>
 </html>

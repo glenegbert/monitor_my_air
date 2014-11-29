@@ -1,3 +1,5 @@
+<h3> <%= link_to "MONITOR MY AIR", home_index_path, method: 'get' %> </h3>
+
 <div class = ".container-fluid">
   <div class = "row" id = "home-form">
     <div class="col-xs-2 col-sm-2 col-md-3 col-lg-4">
@@ -7,6 +9,7 @@
         <%= render :template => 'reports/_form', :locals => { :@report => @report } %>
     </div>
   </br>
+
     <div>
     <% if current_user %>
         <%= form_tag notifications_path, method: :get do %>

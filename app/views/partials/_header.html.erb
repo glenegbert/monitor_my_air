@@ -1,9 +1,8 @@
-<nav class="navbar navbar-default" role="navigation", id="navbar">
+<!-- <nav class="navbar navbar-default" role="navigation", id="navbar"> -->
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, class: "alert alert-info" %>
 <% end %>
   <div id="logo">
-    <h3> <%= link_to "MONITOR MY AIR", home_index_path, method: 'get' %> </h3>
   </div>
   <div id="account">
       <% if current_user %>
@@ -25,4 +24,4 @@
         </div>
       <% end %>
     </div>
-</nav>
+<!-- </nav> -->
