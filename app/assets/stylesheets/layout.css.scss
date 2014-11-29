@@ -14,8 +14,17 @@ border: 1px dotted white;
 }
 
 #notifications-form {
-  width: 40%;
-  margin: auto;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  line-height: 1.1;
+  background:rgba(150,220,255,0.6);
+  border-radius: 10px;
+  border: 1px dotted white;
+  #text-fields {
+    width: 60%;
+    margin: auto;
+  }
 }
 
 .popover {
