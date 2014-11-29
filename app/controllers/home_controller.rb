@@ -2,6 +2,7 @@ class HomeController < ApplicationController
   respond_to :html, :js
   def index
     @report = Report.new
+    session[:return_to] = "home"
   end
 
 end

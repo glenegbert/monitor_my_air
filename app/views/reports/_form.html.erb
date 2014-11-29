@@ -1,0 +1,20 @@
+<%= bootstrap_form_for(@report) do |f| %>
+  <div id="zip-code">
+    <%= f.text_field :zip_code %>
+  </div>
+  <%= f.form_group :checked_concerns, label: { text: "Health Concern Categories" }, help: "Select Categories That Apply to You" do %>
+    <label><%= check_box_tag :lung_disease, "1", params[:lung_disease] %>
+      Asthma or other Lung Disease</label><br>
+    <label><%= check_box_tag :heart_disease, "1", params[:heart_disease] %>
+      Heart Disease</label><br>
+    <label><%= check_box_tag :children, "1", params[:children] %>
+      Children </label><br>
+    <label><%= check_box_tag :older_adult, "1", params[:older_adult] %>
+      Older Adult</label><br>
+    <label><%= check_box_tag :active_outdoors, "1", params[:active_outdoors] %>
+      Active Outdoors</label><br>
+    <label><%= check_box_tag :general_population, "1", params[:general_population] %>
+      General Population </label><br>
+  <% end %>
+  <%= f.submit "Submit", class: "btn btn-success", id: "rbtn" %>
+<% end %>

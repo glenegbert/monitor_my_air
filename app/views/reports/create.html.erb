@@ -4,20 +4,8 @@
     </div>
     <div class="col-xs-11 col-sm-4 col-md-3 col-lg-3">
       <div id="reports_form">
-      <%= bootstrap_form_tag url: reports_path do |f| %>
-        <div id="zip-code">
-          <%= f.text_field :zip_code %>
-        </div>
-        <%= f.form_group :skill_level, label: { text: "Health Concern Categories" }, help: "Select Categories That Apply to You" do %>
-          <%= f.check_box :lung_disease, label: "Asthma or other Lung Disease" %>
-          <%= f.check_box :heart_disease, label: "Heart Disease" %>
-          <%= f.check_box :children, label: "Children (with no specific health concern)" %>
-          <%= f.check_box :older_adult, label: "Older Adults (with no specific health concern)" %>
-          <%= f.check_box :active_outdoors, label: "Active Outdoors (with no specific health concern)" %>
-          <%= f.check_box :general_population, label: "General Population (with no specific health concern)" %>
-        <% end %>
-        <%= f.submit "Submit", class: "btn btn-success" %>
-      <% end %>
+    <%= render "form" %>
+
     </br>
       <div>
         <% if current_user %>
@@ -31,22 +19,11 @@
         <% end %>
       </div>
       <br>
-      <div>
-        <% if current_user %>
-            <%= form_tag reports_path, method: :get do %>
-            <%= button_tag(:class => "btn btn-info btn-sm historical-data-btn") do %>
-               See Historical Data
-              <% end %>
-          <% end %>
-        <% else %>
-          <button type="button" class="btn btn-sm btn-info historical-data-btn" data-toggle="popover" data-content="You must be logged in to see historical data.">See Historical Data</button>
-        <% end %>
-      </div>
     </div>
   </div>
   <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
   </div>
-
+  <% if @report.valid? %>
     <div id="report" class="col-xs-8 col-sm-6 col-md-5 .col-lg-5">
       <h3> Air Quality Report For <%= @report.reporting_area %> </h3>
       <strong> Current Reported Conditions </strong>
@@ -86,5 +63,6 @@
           end %>
       <p> You are <%= outcome %> to experience health effects as a result of air quality. <p>
     </div>
+    <% end %>
   </div>
 </div>
