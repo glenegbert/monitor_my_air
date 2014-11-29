@@ -1,4 +1,4 @@
-<h3> <%= link_to "MONITOR MY AIR", home_index_path, method: 'get' %> </h3>
+
 <% if current_user %>
 <%= form_tag notifications_path, method: :get do %>
 <%= button_tag(:class => "btn btn-info btn-sm notifications-btn") do %>
