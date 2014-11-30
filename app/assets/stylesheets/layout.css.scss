@@ -1,16 +1,43 @@
+#create_reports_form {
+  #zip-code{
+    width: 125px;
+  }
+
+  p {
+    font-size: 16px;
+    padding-top: 22px;
+  }
+  margin-top: 9px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  line-height: 1.8;
+  background: rgba(150, 220, 255, 0.6);
+  border-radius: 10px;
+  border: 1px dotted white;
+  margin-left: -21px;
+}
+
 #reports_form {
 
   #zip-code{
-    width: 120px;
+    width: 125px;
   }
-margin-top: 50px;
-padding-left: 10px;
-padding-bottom: 10px;
-line-height: 1.8;
-background:rgba(150,220,255,0.6);
-border-radius: 10px;
-border: 1px dotted white;
 
+  p {
+    color: white;
+    font-size: 16px;
+  }
+  margin-top: 9px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  line-height: 1.8;
+  background: rgba(150, 220, 255, 0.6);
+  border-radius: 10px;
+  border: 1px dotted white;
+  width: 470px;
+  margin-left: -21px;
 }
 
 #notifications-form {
@@ -94,7 +121,7 @@ margin: auto;
   background:rgba(150,220,255,0.6);
   border-radius: 10px;
   border: 1px dotted white;
-  margin-top: 50px;
+  margin-top: 9px;
 }
 
 #notifications-index {

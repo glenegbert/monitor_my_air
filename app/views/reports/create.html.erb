@@ -1,18 +1,18 @@
-<div class = ".container-fluid">
+<div class = "container-fluid">
   <div class = "row">
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-2">
     </div>
-    <div class="col-xs-11 col-sm-4 col-md-3 col-lg-3">
-      <div id="reports_form">
+    <div class="col-xs-11 col-sm-4 col-md-4 col-lg-3">
+      <div id="create_reports_form">
+        <p> Enter a zip code and any relevant health conditions to get an air quality report.</p>
         <%= render 'form' %>
       </div>
     </div>
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-    </div>
+
 
   <% if @report.valid? %>
-    <div id="report" class="col-xs-8 col-sm-6 col-md-6 .col-lg-5">
-      <h3> Air Quality Report For <%= @report.reporting_area %> </h3>
+    <div id="report" class="col-xs-8 col-sm-6 col-md-5 col-lg-5">
+      <h3> <%= @report.reporting_area %> Is The Nearest Reporting Location For Your Zip Code </h3>
       <strong> Current Reported Conditions </strong>
         <% if @report.observed_contaminates_and_levels.empty? %>
           <p> No observations have been reported </p>
