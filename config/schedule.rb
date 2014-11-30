@@ -22,6 +22,6 @@
 set :environment, "production"
 
 
-every 1.minute do
+every 1.day, :at => '5:00 am' do
   runner "Notifier.send_notifications"
 end
