@@ -49,7 +49,7 @@ class NotificationsController < ApplicationController
   end
 
   def set_conditions(params)
-    condition_ids = params["notification"]["condition_ids"][1..-1]
+    condition_ids = params["notification"]["conditions"][1..-1]
     @new_notification.conditions = condition_ids.map do |id|
       Condition.find(id)
     end

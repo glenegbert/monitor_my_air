@@ -7,6 +7,7 @@ class Notification < ActiveRecord::Base
     self.conditions.map{|condition| condition.name.gsub("_"," ")}.join(", ")
 
   end
+  
 
   def clean_conditions_message
     concerns= self.conditions.map{|condition| condition.name.gsub("_"," ")}

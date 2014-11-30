@@ -6,8 +6,8 @@
       <%= f.text_field :zip_code %>
       <%= f.text_field :email %>
       <%= f.text_field :phone_number %>
-      </div.
-      <%= f.collection_check_boxes(:condition_ids, Condition.all, :id, :name) %>
+    </div>
+      <%= f.collection_check_boxes(:conditions, Condition.all, :id, :clean_condition) %>
       <%= f.submit class: "btn btn-success" %>
   <% end %>
 </div>
