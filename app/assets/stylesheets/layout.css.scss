@@ -32,15 +32,35 @@ border: 1px dotted white;
 }
 
 #logo-header {
-margin-top: 40px;
+margin-top: 28px;
 width: 571px;
 margin: auto;
+
+  h3 {
+  font-size: 64px;
+  font-family: 'Merriweather', serif;
+  font-weight: 50px;
+  font-family: 'Merriweather', serif;
+  }
+
   a {
     color: white;
+
+
   }
-font-size: 50px;
-font-family: 'Merriweather', serif;
-font-weight: 50px;
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    width: 256px;
+    height: 177px;
+    margin-bottom: -135px;
+    margin-left: 105px;
+  }
+
+
 }
 
 #new-notification-form {
@@ -58,7 +78,7 @@ font-weight: 50px;
 }
 
 #nav-items {
-  min-height: 150px;
+  min-height: 76px;
 }
 
 #account {
