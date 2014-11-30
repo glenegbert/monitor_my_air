@@ -41,15 +41,15 @@
 }
 
 #notifications-form {
-  margin-top: 30px;
+  margin-top: 10px;
   padding-left: 15px;
   padding-bottom: 10px;
-  line-height: .8;
+  line-height: .6;
   background:rgba(150,220,255,0.6);
   border-radius: 10px;
   border: 1px dotted white;
   #text-fields {
-    width: 60%;
+    width: 80%;
     margin-top: 10px;
   }
 }
@@ -91,7 +91,7 @@ margin: auto;
 }
 
 #new-notification-form {
-  width: 40%;
+  width: 32%;
   margin: auto;
 }
 
@@ -153,4 +153,8 @@ margin: auto;
       font-size: 25px;
       color: black;
     }
+}
+
+.button_group {
+  display: inline-block;
 }

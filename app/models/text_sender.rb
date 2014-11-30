@@ -10,7 +10,7 @@ class TextSender
     @client.account.messages.create({
       :from => '+17209033040',
       :to => notification.phone_number,
-      :body => "Welcome to Monitor My Air. You will get notifications at this email address whenever current or forecasted
+      :body => "Thanks for creating a notification with Monitor My Air. You will get notifications at this email address whenever current or forecasted
       air quality in zip code: #{notification.zip_code} is likely to aggravate these health conditions: #{notification.clean_conditions_message}"
     })
   end
