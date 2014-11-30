@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 group :test, :development do
   gem "rspec-rails"
-  gem "faraday", '~> 0.9.0'
   gem 'pry'
   gem  'launchy'
 end
@@ -14,6 +13,7 @@ group :test do
   gem "codeclimate-test-reporter", require: nil
 end
 
+gem "faraday", '~> 0.9.0'
 gem 'autoprefixer-rails'
 gem 'rails', '4.1.6'
 gem 'sqlite3'
