@@ -16,12 +16,12 @@ class NotificationsController < ApplicationController
     @new_notification.user_id = current_user.id
     @new_notification.save
     if @new_notification.email.length > 0 && @new_notification.phone_number
-      UserNotifier.notification_creation_email(@new_notification).deliver
-      TextSender.send_notification_creation_text(@new_notification)
+      UserNotifier.delay.notification_creation_email(@new_notification)
+      TextSender.delay.send_notification_creation_text(@new_notification)
     elsif @new_notification.email.length > 0
-      UserNotifier.notification_creation_email(@new_notification).deliver
+      UserNotifier.delay.notification_creation_email(@new_notification)
     else
-      TextSender.send_notification_creation_text(@new_notification)
+      TextSender.delay.send_notification_creation_text(@new_notification)
     end
     @notification = Notification.new
   end
