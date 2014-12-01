@@ -8,12 +8,7 @@ class ReportsController < ApplicationController
 
   def create
     @report = Report.new(params[:report][:zip_code], params)
-    if @report.invalid? && session[:return_to] == "create"
-      render "create"
-    elsif @report.invalid? && session[:return_to] == "home"
-      render "home/index"
-    end
-    session[:return_to] = "create"
+    report_errors(@report)
   end
 
   def show
@@ -22,5 +17,9 @@ class ReportsController < ApplicationController
 
   private
 
-
+  def report_errors(report)
+    if @report.invalid?
+      render "home/index"
+    end
+  end
 end
