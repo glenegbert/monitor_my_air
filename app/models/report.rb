@@ -8,7 +8,6 @@ class Report
   validates_presence_of :zip_code
   validates_presence_of :checked_concerns
 
-
   def initialize(zip_code=nil, params={})
     @zip_code = zip_code
     @checked_concerns = params.map {|concern, value| concern if value == "1"}.compact
@@ -89,8 +88,6 @@ class Report
     end
     concerns.join(" ")
   end
-
-
 
   def lung_disease?(day)
     condition_indicators = ["O3","PM2.5","PM10"]
