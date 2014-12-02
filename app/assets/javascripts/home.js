@@ -9,4 +9,12 @@ $(document).ready(function(){
     $("#new-notification-form").show()
   }
 
+  var $loading = $('#loadingDiv').hide();
+  $(document)
+  .ajaxStart(function () {
+    $loading.show();
+  })
+  .ajaxStop(function () {
+    $loading.hide();
+  });
 })
