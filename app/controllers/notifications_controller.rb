@@ -12,10 +12,7 @@ class NotificationsController < ApplicationController
 
   def create
     @new_notification = Notification.create(notification_params)
-    set_conditions(params)
-    @new_notification.user_id = current_user.id
-    @new_notification.save
-    send_welcome_messages
+    new_notification_tasks(params)
     @notification = Notification.new
   end
 
@@ -58,5 +55,12 @@ class NotificationsController < ApplicationController
     else
       TextSender.delay.send_notification_creation_text(@new_notification)
     end
+  end
+
+  def new_notification_tasks(params)
+    set_conditions(params)
+    @new_notification.user_id = current_user.id
+    @new_notification.save
+    send_welcome_messages
   end
 end
