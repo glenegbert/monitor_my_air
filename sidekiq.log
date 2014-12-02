@@ -75,3 +75,7 @@
 2014-12-02T17:31:28.653Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-f66298f094b1de12d15ff8b2 INFO: start
 2014-12-02T17:31:29.262Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-f66298f094b1de12d15ff8b2 INFO: done: 0.609 sec
 2014-12-02T17:31:30.035Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-bf6cdbf3fa8bd241e2002b34 INFO: done: 1.416 sec
+2014-12-02T17:45:20.315Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-1eef58b91772ef2d90d0c9e2 INFO: start
+2014-12-02T17:45:20.336Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-387f03c722e23603c30c9f39 INFO: start
+2014-12-02T17:45:21.534Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-387f03c722e23603c30c9f39 INFO: done: 1.198 sec
+2014-12-02T17:45:22.231Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-1eef58b91772ef2d90d0c9e2 INFO: done: 1.916 sec
