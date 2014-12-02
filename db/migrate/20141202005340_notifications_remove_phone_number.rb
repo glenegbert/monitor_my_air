@@ -1,4 +1,4 @@
-class NotificationsChangePhoneNumberType < ActiveRecord::Migration
+class NotificationsRemovePhoneNumber < ActiveRecord::Migration
   def change
     remove_column :notifications, :phone_number
   end

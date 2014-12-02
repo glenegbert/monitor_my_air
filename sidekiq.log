@@ -11,3 +11,11 @@
 2014-12-02T00:30:20.320Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-2b6afb8605881fa55c51ad96 INFO: start
 2014-12-02T00:30:21.202Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-2b6afb8605881fa55c51ad96 INFO: done: 0.882 sec
 2014-12-02T00:30:21.609Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-e25e109c9307c3006584826a INFO: done: 1.305 sec
+2014-12-02T01:02:58.547Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-d07b725dc6b56b084308f7ca INFO: start
+2014-12-02T01:02:59.523Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-d07b725dc6b56b084308f7ca INFO: done: 0.975 sec
+2014-12-02T01:04:36.647Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-c6c0052c54b9806a29058ddb INFO: start
+2014-12-02T01:04:37.284Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-c6c0052c54b9806a29058ddb INFO: done: 0.637 sec
+2014-12-02T01:04:41.928Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-fad4cd8dcf39c5acb9ce2829 INFO: start
+2014-12-02T01:04:45.082Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-fad4cd8dcf39c5acb9ce2829 INFO: done: 3.153 sec
+2014-12-02T01:06:10.275Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-fe82c91d04af1b3975562a02 INFO: start
+2014-12-02T01:06:10.956Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-fe82c91d04af1b3975562a02 INFO: done: 0.682 sec
