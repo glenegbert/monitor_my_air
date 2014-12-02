@@ -27,5 +27,5 @@ production:
   database: monitor_my_air
   host: localhost
   pool: 5
-  username: glenegbert
-  password: rivers1
+  username: deployment
+  password: password1
