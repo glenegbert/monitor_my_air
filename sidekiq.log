@@ -1,0 +1,9 @@
+# Logfile created on 2014-12-01 15:45:48 -0700 by logger.rb/44203
+2014-12-01T22:45:51.282Z 64601 TID-ouyftgiqs INFO: Running in ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-darwin13.0]
+2014-12-01T22:45:51.282Z 64601 TID-ouyftgiqs INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2014-12-01T22:45:51.282Z 64601 TID-ouyftgiqs INFO: Upgrade to Sidekiq Pro for more features and support: http://sidekiq.org/pro
+2014-12-01T22:45:51.372Z 64601 TID-ouygnx7k8 INFO: Booting Sidekiq 3.3.0 with redis options {}
+2014-12-01T23:07:58.788Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-8539754d7208a1170094c541 INFO: start
+2014-12-01T23:08:00.445Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-8539754d7208a1170094c541 INFO: done: 1.656 sec
+2014-12-01T23:09:24.287Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-56c27f43bbd27f69e35a5190 INFO: start
+2014-12-01T23:09:25.242Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-56c27f43bbd27f69e35a5190 INFO: done: 0.955 sec

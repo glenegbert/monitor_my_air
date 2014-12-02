@@ -1,1 +1,1 @@
-worker: bundle exec sidekiq
+worker: RAILS_ENV=production bundle exec sidekiq
