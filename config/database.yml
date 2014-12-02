@@ -28,4 +28,4 @@ production:
   host: localhost
   pool: 5
   username: deployment
-  password: password1
+  password: rivers1
