@@ -19,3 +19,39 @@
 2014-12-02T01:04:45.082Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-fad4cd8dcf39c5acb9ce2829 INFO: done: 3.153 sec
 2014-12-02T01:06:10.275Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-fe82c91d04af1b3975562a02 INFO: start
 2014-12-02T01:06:10.956Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-fe82c91d04af1b3975562a02 INFO: done: 0.682 sec
+2014-12-02T14:21:40.940Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-1db79c263e38bef398017b17 INFO: start
+2014-12-02T14:21:40.955Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-7344d98348380fc3a615692d INFO: start
+2014-12-02T14:21:41.709Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-7344d98348380fc3a615692d INFO: done: 0.753 sec
+2014-12-02T14:21:42.222Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-1db79c263e38bef398017b17 INFO: done: 1.282 sec
+2014-12-02T14:42:14.150Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-32642d360cc756b17cadd9eb INFO: start
+2014-12-02T14:42:14.182Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-a9768fd26877e2ee5ec3c019 INFO: start
+2014-12-02T14:42:14.961Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-a9768fd26877e2ee5ec3c019 INFO: done: 0.779 sec
+2014-12-02T14:42:18.448Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-32642d360cc756b17cadd9eb INFO: done: 4.298 sec
+2014-12-02T14:42:29.662Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-b2e74c609d818395fe457318 INFO: start
+2014-12-02T14:42:29.669Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-70cb064b4e9c4665a9925289 INFO: start
+2014-12-02T14:42:30.219Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-b2e74c609d818395fe457318 INFO: done: 0.557 sec
+2014-12-02T14:42:30.626Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-70cb064b4e9c4665a9925289 INFO: done: 0.957 sec
+2014-12-02T14:44:58.626Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-995cf6a03435ee06b8760c76 INFO: start
+2014-12-02T14:44:58.628Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-0bb1cdee6af81b4b01c7b903 INFO: start
+2014-12-02T14:44:59.320Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-995cf6a03435ee06b8760c76 INFO: done: 0.694 sec
+2014-12-02T14:44:59.983Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-0bb1cdee6af81b4b01c7b903 INFO: done: 1.355 sec
+2014-12-02T14:47:47.579Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-5a339c4568066807973e09aa INFO: start
+2014-12-02T14:47:47.598Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-a6e42d23acdda18c3722135a INFO: start
+2014-12-02T14:47:48.235Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-a6e42d23acdda18c3722135a INFO: done: 0.637 sec
+2014-12-02T14:47:48.771Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-5a339c4568066807973e09aa INFO: done: 1.192 sec
+2014-12-02T14:50:01.830Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-efcb760703fe8d6f6f58dbf7 INFO: start
+2014-12-02T14:50:01.854Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-26366048175d6fd859fc737c INFO: start
+2014-12-02T14:50:02.438Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-26366048175d6fd859fc737c INFO: done: 0.585 sec
+2014-12-02T14:50:03.062Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-efcb760703fe8d6f6f58dbf7 INFO: done: 1.233 sec
+2014-12-02T14:51:19.270Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-ba00451b47f19b1564a1a2a3 INFO: start
+2014-12-02T14:51:19.287Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-e9d54487506bf1be033a8764 INFO: start
+2014-12-02T14:51:19.915Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-e9d54487506bf1be033a8764 INFO: done: 0.628 sec
+2014-12-02T14:51:20.631Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-ba00451b47f19b1564a1a2a3 INFO: done: 1.361 sec
+2014-12-02T17:08:44.197Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-17696c0b6bd507f9cb06a30d INFO: start
+2014-12-02T17:08:44.222Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-2e8a33b8e689e173aa8c6f46 INFO: start
+2014-12-02T17:08:44.952Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-2e8a33b8e689e173aa8c6f46 INFO: done: 0.731 sec
+2014-12-02T17:08:45.207Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-17696c0b6bd507f9cb06a30d INFO: done: 1.01 sec
+2014-12-02T17:08:54.543Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-3288a904205d08f6a8f858d0 INFO: start
+2014-12-02T17:08:54.575Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-d705372dde571f15294a1e53 INFO: start
+2014-12-02T17:08:55.156Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-d705372dde571f15294a1e53 INFO: done: 0.581 sec
+2014-12-02T17:08:55.953Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-3288a904205d08f6a8f858d0 INFO: done: 1.41 sec

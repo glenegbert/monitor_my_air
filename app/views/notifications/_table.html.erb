@@ -1,4 +1,4 @@
-<tr>
+<tr id="<%= dom_id notification %>">
 <td> <%= notification.name %> </td>
 <td> <%= notification.email %> </td>
 <td> <%= notification.phone_number %> </td>
@@ -6,7 +6,7 @@
 <td> <%= notification.clean_conditions %></td>
 <td>
   <div class=button_group>
-    <%= form_tag notification_path(notification), method: :delete do %>
+    <%= form_tag notification_path(notification), method: :delete, remote: true do %>
     <%= button_tag(:class => "btn btn-success btn-sm") do %>
     Delete
     <% end %>
