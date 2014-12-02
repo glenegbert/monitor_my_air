@@ -13,7 +13,7 @@
     <% end %>
   </div>
   <div class=button_group>
-    <%= form_tag edit_notification_path(notification), method: :get do %>
+    <%= form_tag edit_notification_path(notification), method: :get, remote: true, :id => "ebutton" do %>
     <%= button_tag(:class => "btn btn-success btn-sm") do %>
     Edit
     <% end %>

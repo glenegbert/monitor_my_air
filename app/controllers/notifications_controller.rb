@@ -32,9 +32,11 @@ class NotificationsController < ApplicationController
   end
 
   def update
-    @notification = current_user.notifications.find(params[:id])
-    @notification.update(notification_params)
-    redirect_to notifications_path
+    @new_notification = current_user.notifications.find(params[:id])
+    @new_notification.update(notification_params)
+    set_conditions(params)
+    @new_notification.save
+    @notification = Notification.new
   end
 
   def edit

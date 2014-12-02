@@ -1,0 +1,8 @@
+$('#notifications-index table').append("<%= escape_javascript(render :template => 'notifications/_table', :locals => { :notification => @new_notification }) %>")
+$('#<%= dom_id @new_notification %>').remove()
+$('#notifications-index').show()
+
+$('#new-notification-form').html("<%= escape_javascript(render :template => 'notifications/_form', :locals => { :notification => @notification }) %>")
+
+
+$("#new-notification-form").hide()

@@ -1,0 +1,6 @@
+$('#new-notification-form').html("<%= escape_javascript(render :template => 'notifications/_form', :locals => { :notification => @notification }) %>")
+
+
+$("#new-notification-form").show()
+
+$('#notifications-index').hide()
