@@ -1,6 +1,5 @@
+$('#notifications-index').fadeOut(900)
+
 $('#new-notification-form').html("<%= escape_javascript(render :template => 'notifications/_form', :locals => { :notification => @notification }) %>")
 
-
-$("#new-notification-form").show()
-
-$('#notifications-index').hide()
+$("#new-notification-form").delay(1000).fadeIn(1000)

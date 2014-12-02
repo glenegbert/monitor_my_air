@@ -2,11 +2,11 @@
 
 
 
+$("#new-notification-form").fadeOut(1000)
+
 $('#notifications-index table').append("<%= escape_javascript(render :template => 'notifications/_table', :locals => { :notification => @new_notification }) %>")
 
-$('#notifications-index').show()
+$('#notifications-index').delay(1000).fadeIn(1000)
 
-$('#new-notification-form').html("<%= escape_javascript(render :template => 'notifications/_form', :locals => { :notification => @notification }) %>")
-
-
-$("#new-notification-form").hide()
+var a = function() {$('#new-notification-form').html("<%= escape_javascript(render :template => 'notifications/_form', :locals => { :notification => @notification }) %>")}
+setTimeout(a, 2000);

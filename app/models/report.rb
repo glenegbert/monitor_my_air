@@ -11,7 +11,6 @@ class Report
   def initialize(zip_code=nil, params={})
     @zip_code = zip_code
     @checked_concerns = params.map {|concern, value| concern if value == "1"}.compact
-
   end
 
   def forecast
