@@ -7,3 +7,7 @@
 2014-12-01T23:08:00.445Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-8539754d7208a1170094c541 INFO: done: 1.656 sec
 2014-12-01T23:09:24.287Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-56c27f43bbd27f69e35a5190 INFO: start
 2014-12-01T23:09:25.242Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedClass JID-56c27f43bbd27f69e35a5190 INFO: done: 0.955 sec
+2014-12-02T00:30:20.303Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-e25e109c9307c3006584826a INFO: start
+2014-12-02T00:30:20.320Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-2b6afb8605881fa55c51ad96 INFO: start
+2014-12-02T00:30:21.202Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-2b6afb8605881fa55c51ad96 INFO: done: 0.882 sec
+2014-12-02T00:30:21.609Z 64601 TID-ouyftkpto Sidekiq::Extensions::DelayedMailer JID-e25e109c9307c3006584826a INFO: done: 1.305 sec
