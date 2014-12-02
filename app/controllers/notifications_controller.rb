@@ -23,9 +23,7 @@ class NotificationsController < ApplicationController
 
   def update
     @new_notification = current_user.notifications.find(params[:id])
-    @new_notification.update(notification_params)
-    set_conditions(params)
-    @new_notification.save
+    update_notification_tasks(notification_params, params)
     @notification = Notification.new
   end
 
@@ -40,7 +38,7 @@ class NotificationsController < ApplicationController
   end
 
   def set_conditions(params)
-    condition_ids = params["notification"]["conditions"][1..-1]
+    condition_ids = params["notification"]["condition_ids"][1..-1]
     @new_notification.conditions = condition_ids.map do |id|
       Condition.find(id)
     end
@@ -62,5 +60,11 @@ class NotificationsController < ApplicationController
     @new_notification.user_id = current_user.id
     @new_notification.save
     send_welcome_messages
+  end
+
+  def update_notification_tasks(notification_params, params)
+    @new_notification.update(notification_params)
+    set_conditions(params)
+    @new_notification.save
   end
 end

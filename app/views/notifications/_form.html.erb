@@ -2,12 +2,17 @@
 <div id = "notifications-form">
 <%= bootstrap_form_for(@notification, remote: true) do |f| %>
       <div id="text-fields">
-      <%= f.text_field :name %> 
+      <%= f.text_field :name %>
       <%= f.text_field :zip_code %>
       <%= f.text_field :email %>
       <%= f.text_field :phone_number %>
     </div>
-      <%= f.collection_check_boxes(:conditions, Condition.all, :id, :clean_condition) %>
+      <div id ="check-boxes">
+      <%= f.collection_check_boxes(:condition_ids, Condition.all, :id, :clean_condition) %>
+      </div>
       <%= f.submit class: "btn btn-success" %>
   <% end %>
 </div>
+<script charset="utf-8">
+$("#check-boxes .control-label").hide()
+</script>
