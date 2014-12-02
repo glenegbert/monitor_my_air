@@ -33,3 +33,4 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'twilio-ruby', '~> 3.12'
 gem 'whenever', :require => false
 gem "sidekiq"
+gem 'pg'
