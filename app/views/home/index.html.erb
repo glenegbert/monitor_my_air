@@ -1,12 +1,11 @@
 
-
+<div id="home-form">
 <div class = ".container-fluid">
   <div class = "row" id = "home-form">
     <div class="col-xs-2 col-sm-2 col-md-3 col-lg-4">
     </div>
     <div class="col-xs-6 col-sm-5 col-md-4 col-lg-3">
       <div id="reports_form">
-        <p> Enter a zip code and any relevant health conditions to get an air quality report. </p>
 
         <%= render :template => 'reports/_form', :locals => { :@report => @report } %>
       </div>
@@ -17,5 +16,23 @@
 
     </div>
     <br>
+  </div>
+</div>
+</div>
+
+<div id='report-form' style="display:none">
+  <div class = "container-fluid">
+    <div class = "row">
+      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-2">
+      </div>
+      <div class="col-xs-11 col-sm-4 col-md-4 col-lg-3">
+        <div id="create_reports_form">
+          <%= render :template => 'reports/_form', :locals => { :@report => @report } %>
+        </div>
+      </div>
+        <div id="report" class="col-xs-8 col-sm-6 col-md-5 col-lg-5">
+        </div>
+
+    </div>
   </div>
 </div>

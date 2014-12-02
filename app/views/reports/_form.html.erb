@@ -1,4 +1,6 @@
-<%= bootstrap_form_for(@report) do |f| %>
+<%= bootstrap_form_for(@report, remote: true) do |f| %>
+<p> Enter a zip code and any relevant health conditions to get an air quality report. </p>
+
   <div id="zip-code">
     <%= f.text_field :zip_code %>
   </div>

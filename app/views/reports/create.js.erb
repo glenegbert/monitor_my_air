@@ -1,1 +1,10 @@
-$('#home-form').show()
+
+$('#report').slideToggle(1000)
+$('#report').delay(500).slideToggle(1000)
+$('#home-form').fadeOut(1000)
+$('#report-form').delay(1000).fadeIn(1000)
+
+
+{$('#create_reports_form').html("<%= escape_javascript(render :template => 'reports/_form', :locals => { :@report => @report }) %>")}
+var a = function() {$('#report').html("<%= escape_javascript(render :template => 'reports/_report', :locals => { :@report => @report }) %>")}
+setTimeout(a, 1000);
