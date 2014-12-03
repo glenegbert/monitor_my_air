@@ -1,3 +1,4 @@
+require 'air_monitor'
 
 class Report
 

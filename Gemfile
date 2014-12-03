@@ -34,4 +34,5 @@ gem 'twilio-ruby', '~> 3.12'
 gem 'whenever', :require => false
 gem "sidekiq"
 gem 'pg'
-gem 'air_monitor', :path => "/Users/glenegbert/Dropbox/ruby_projects/air_monitor"
+gem 'air_monitor', '~> 0.0.1'
+gem 'pry-rails', :group => :development
