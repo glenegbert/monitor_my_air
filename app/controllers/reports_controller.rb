@@ -1,6 +1,6 @@
 
 class ReportsController < ApplicationController
-  respond_to :html, :js
+  respond_to :html, :js, :json
 
   def index
     redirect_to home_index_path

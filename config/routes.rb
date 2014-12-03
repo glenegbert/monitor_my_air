@@ -7,6 +7,12 @@ Rails.application.routes.draw do
   resource :sessions, :only => [:create]
   delete "/logout" => "sessions#destroy", as: :logout
   get "/login" => redirect("/auth/twitter"), as: :login
+
+  namespace :api do
+    namespace :v1 do
+      resources :reports, except: [:new, :edit]
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
