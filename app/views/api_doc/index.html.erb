@@ -1,0 +1,31 @@
+<div id="api-docs-page">
+<h3> API Documentation </h3>
+
+<strong> Request URL </strong> <span> - http://localhost:3000/api/v1/reports/80228.json?conditions=children,lung_disease </span>
+<p>
+<strong> Options </strong>
+
+Replace 80228 with any US Zip Code
+Place any of the following conditions after conditions=
+<ul>
+<li> children  </li>
+<li> lung_disease </li>
+<li> heart_disease </li>
+<li> older_adult </li>
+<li> active_outdoors </li>
+<li> general_population </li>
+</ul>
+</p>
+
+<strong> Sample Output </strong>
+<p> ["Denver",false,false,{"O3":"Good","PM2.5":"Good"},{"O3":"Good","PM2.5":"Moderate"}] </p>
+
+<strong> Components </strong>
+<ol>
+<li> Nearest reporting area for zip code  </li>
+<li> Current Health Impact Likely (True or False) </li>
+<li> Forecasted (tommorrow) Health Impact Likely (True or False) </li>
+<li> Current Contaminate Name: Current Contaminate Value </li>
+<li> Forecasted Contaminate Name: Forecasted Contaminate Value </li>
+</ol>
+</div>

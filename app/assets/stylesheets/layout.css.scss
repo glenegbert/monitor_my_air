@@ -171,3 +171,20 @@ margin: auto;
   width: 100px;
   z-index: 9999999;
 }
+
+#api_doc {
+  float:right;
+  margin-right: 10px;
+  margin-top:-80px;
+  a { color: white;
+    }
+}
+
+#api-docs-page {
+  width: 80%;
+  margin: auto;
+  background:rgba(150,220,255,0.6);
+  border-radius: 10px;
+  border: 1px dotted white;
+  padding: 10px;
+}
