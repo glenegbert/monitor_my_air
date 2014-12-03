@@ -14,17 +14,10 @@ describe 'the application', type: :feature do
       expect(page).to have_link('Logout')
     end
 
-    it 'has a "my notifications" link in user dropdown' do
-      click_on("drop-down")
-      click_on("My Notifications")
-      expect(page).to have_css("#notifications-index")
-    end
-
     xit 'can add notifications' do
-      click_on("drop-down")
-      click_on("My Notifications")
-      click_on("Create a New Notification")
-      expect(page).to have_css("#new-notification-form")
+      click_on("Create Notifications")
+      expect(page).to have_content("Your Notifications")
+      find(:css, "#nbutton").click
       page.fill_in('Name', with: "My Test Notification")
       page.fill_in('Zip code', with: "16055")
       page.fill_in('Email', with: "Test@Test.com")

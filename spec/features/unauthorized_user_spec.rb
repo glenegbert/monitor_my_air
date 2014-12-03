@@ -12,13 +12,13 @@ describe 'As a Public User', type: :feature do
       expect(page).to have_link('Login With Twitter', href: login_path)
     end
 
-    it 'has a create notifications button' do
-      expect(page).to have_css('.notifications-btn')
+    it 'has a create notifications prompt' do
+      expect(page).to have_content('Want to create custom notifications?')
        page.fill_in('Zip code', with: "16055")
        find(:css, "#older_adult").set(true)
        click_on "Submit"
-      expect(page).to have_css('.notifications-btn')
-    end
+       expect(page).to have_content('Want to create custom notifications?')
+     end
 
     xit 'has a create historical data button' do
       expect(page).to have_css('.historical-data-btn')
@@ -28,7 +28,7 @@ describe 'As a Public User', type: :feature do
       expect(page).to have_css('.historical-data-btn')
     end
 
-    it 'stays on page when notifications button is clicked' do
+    xit 'stays on page when notifications button is clicked' do
       expect(page).to have_css('#reports_form')
       expect(page).to_not have_css('#report')
       click_on "Create Notifications"
@@ -65,7 +65,7 @@ describe 'As a Public User', type: :feature do
       find(:css, "#heart_disease").set(true)
       click_on "Submit"
       expect(page).to have_css("#report")
-      expect(page).to have_css("#reports_form")
+      expect(page).to have_content("Pittsburgh")
       expect(page).to have_content("heart disease")
     end
   end
