@@ -3,6 +3,12 @@
     width: 125px;
   }
 
+  .btn {
+    background-color: #008AE6;
+    border-radius: 8px;
+    border-color: #008AE6;
+  }
+
   p {
     font-size: 16px;
     padding-top: 22px;
@@ -19,6 +25,12 @@
 }
 
 #reports_form {
+
+  .btn {
+    background-color: #008AE6;
+    border-radius: 8px;
+    border-color: #008AE6;
+  }
 
   #zip-code{
     width: 125px;
@@ -63,11 +75,13 @@ margin-top: 28px;
 width: 571px;
 margin: auto;
 
+  .btn {
+    color: #008AE6;
+  }
+
   h3 {
   font-size: 64px;
-  font-family: 'Merriweather', serif;
-  font-weight: 50px;
-  font-family: 'Merriweather', serif;
+  font-family: 'Lato', sans-serif
   }
 
   a {
@@ -106,6 +120,12 @@ margin: auto;
 
 #nav-items {
   min-height: 76px;
+  .btn {
+    background-color: #008AE6;
+    border-radius: 8px;
+    margin-left: 49px;
+    border-color: #008AE6;
+  }
 }
 
 #account {
@@ -114,14 +134,21 @@ margin: auto;
 
 #notifications {
   margin-left: 10px;
+  margin-bottom: -37px;
 }
 
 #report {
-  line-height: 1.8;
+  line-height: 1.6;
   background:rgba(150,220,255,0.6);
   border-radius: 10px;
   border: 1px dotted white;
   margin-top: 9px;
+
+  .btn {
+    background-color: #008AE6;
+    border-radius: 8px;
+    border-color: #008AE6;
+  }
 }
 
 #notifications-index {

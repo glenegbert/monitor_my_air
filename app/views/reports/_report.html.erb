@@ -1,5 +1,5 @@
 
-  <h3> <%= @report.reporting_area %> Is The Nearest Reporting Location For Your Zip Code </h3>
+  <h3> Nearest Reporting Location: <%= @report.reporting_area %> </h3>
   <strong> Current Reported Conditions </strong>
   <% if @report.observed_contaminates_and_levels.empty? %>
   <p> No observations have been reported </p>
@@ -16,6 +16,10 @@
   <p><%= contaminate %> = <%= level %> </p>
   <% end %>
   <% end %>
+  <div>
+    <button type="button" class="btn btn-sm btn-danger" data-toggle="popover" title="Particulate Abbreviations" data-html="true"
+    data-content= "<p> O3 - Ozone </br> P2.5 - Small Particulate</br> P10 - Large Particulate</br>CO - Carbon Monixide</p>" >What do these mean?  </button>
+  </div>
   <h3> Your Warnings </h3>
   <p> Based on the information provided by reporting agencies in your area and these health
     concerns:  <%= @report.clean_checked_concerns%>
@@ -28,7 +32,7 @@
   else
     outcome = "unlikely"
   end %>
-  <p> You are <%= outcome %> to experience health effects as a result of air quality. <p>
+  <p> You are <%= outcome %> to experience health effects as a result of air quality. </p>
     <strong> Tomorrow </strong>
     <%  if @report.health_effects?("tomorrow") == true
       outcome = "likely"
@@ -36,4 +40,10 @@
       outcome = "unlikely"
     end %>
     <p> You are <%= outcome %> to experience health effects as a result of air quality. <p>
-    
+
+
+    <script charset="utf-8">
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    </script>
