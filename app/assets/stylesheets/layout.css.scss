@@ -149,7 +149,7 @@ margin: auto;
 
 #notifications {
   margin-left: 10px;
-  margin-bottom: -37px;
+  min-height: 40px;
 }
 
 #report {
@@ -213,7 +213,7 @@ margin: auto;
 #api_doc {
   float:right;
   margin-right: 10px;
-  margin-top:-39px;
+  margin-top:-78px;
   a { color: white;
     }
 }
