@@ -20,9 +20,8 @@
     <button type="button" class="btn btn-sm btn-danger" data-toggle="popover" title="Particulate Abbreviations" data-html="true"
     data-content= "<p> O3 - Ozone </br> P2.5 - Small Particulate</br> P10 - Large Particulate</br>CO - Carbon Monixide</p>" >What do these mean?  </button>
   </div>
-  <h3> Your Warnings </h3>
-  <p> Based on the information provided by reporting agencies in your area and these health
-    concerns:  <%= @report.clean_checked_concerns%>
+  <h3> Warnings </h3>
+  <p> Health Concerns:  <%= @report.clean_checked_concerns%>
 
 
   </p>
@@ -32,14 +31,14 @@
   else
     outcome = "unlikely"
   end %>
-  <p> You are <%= outcome %> to experience health effects as a result of air quality. </p>
+  <p> Health effects as a result of air quality are <%= outcome %>.   </p>
     <strong> Tomorrow </strong>
     <%  if @report.health_effects?("tomorrow") == true
       outcome = "likely"
     else
       outcome = "unlikely"
     end %>
-    <p> You are <%= outcome %> to experience health effects as a result of air quality. <p>
+    <p> Health effects as a result of air quality are <%= outcome %>. <p>
 
 
     <script charset="utf-8">
