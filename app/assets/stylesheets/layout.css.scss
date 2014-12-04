@@ -191,8 +191,8 @@ margin: auto;
   border: 0 none;
   height: 1px;
   left: 50%;
-  margin-left: -400px;
-  margin-top: -400px;
+  margin-left: -200px;
+  margin-top: -75px;
   position: fixed;
   top: 50%;
   width: 100px;
@@ -214,4 +214,12 @@ margin: auto;
   border-radius: 10px;
   border: 1px dotted white;
   padding: 10px;
+}
+
+#subscript {
+  margin-top:-8px;
+}
+
+#warnings {
+  margin-top: 9px;
 }

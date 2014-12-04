@@ -1,5 +1,6 @@
 
   <h3> Nearest Reporting Location: <%= @report.reporting_area %> </h3>
+  <p id="subscript"> (Conditions Reported My Vary By Location) </p>
   <strong> Current Reported Conditions </strong>
   <% if @report.observed_contaminates_and_levels.empty? %>
   <p> No observations have been reported </p>
@@ -20,7 +21,7 @@
     <button type="button" class="btn btn-sm btn-danger" data-toggle="popover" title="Particulate Abbreviations" data-html="true"
     data-content= "<p> O3 - Ozone </br> P2.5 - Small Particulate</br> P10 - Large Particulate</br>CO - Carbon Monixide</p>" >What do these mean?  </button>
   </div>
-  <h3> Warnings </h3>
+  <h3 id="warnings"> Warnings </h3>
   <p> Health Concerns:  <%= @report.clean_checked_concerns%>
 
 
