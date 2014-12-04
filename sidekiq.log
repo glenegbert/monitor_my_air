@@ -2527,3 +2527,7 @@
 /Users/glenegbert/.rvm/gems/ruby-2.1.2/gems/celluloid-0.16.0/lib/celluloid/actor.rb:357:in `block in task'
 /Users/glenegbert/.rvm/gems/ruby-2.1.2/gems/celluloid-0.16.0/lib/celluloid/tasks.rb:57:in `block in initialize'
 /Users/glenegbert/.rvm/gems/ruby-2.1.2/gems/celluloid-0.16.0/lib/celluloid/tasks/task_fiber.rb:15:in `block in create'
+2014-12-04T17:04:27.944Z 64601 TID-ouyfyc9fw Sidekiq::Extensions::DelayedMailer JID-d55036c57a3add46e12b81af INFO: start
+2014-12-04T17:04:27.968Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-a9244a14ab2f9c9f772483e1 INFO: start
+2014-12-04T17:04:28.763Z 64601 TID-ouyfw7pd0 Sidekiq::Extensions::DelayedClass JID-a9244a14ab2f9c9f772483e1 INFO: done: 0.795 sec
+2014-12-04T17:04:29.724Z 64601 TID-ouyfyc9fw Sidekiq::Extensions::DelayedMailer JID-d55036c57a3add46e12b81af INFO: done: 1.78 sec

@@ -1,3 +1,5 @@
+
+
 #create_reports_form {
   #zip-code{
     width: 125px;
@@ -60,9 +62,16 @@
   background:rgba(150,220,255,0.6);
   border-radius: 10px;
   border: 1px dotted white;
+
   #text-fields {
     width: 80%;
     margin-top: 10px;
+  }
+
+  .btn {
+    background-color: #008AE6;
+    border-radius: 8px;
+    border-color: #008AE6;
   }
 }
 
@@ -112,6 +121,12 @@ margin: auto;
 #notifications-index {
   width: 80%;
   margin: auto;
+
+  .btn {
+    background-color: #008AE6;
+    border-radius: 8px;
+    border-color: #008AE6;
+  }
 }
 
 #account {
@@ -158,11 +173,7 @@ margin: auto;
   padding: 10px;
   margin-top: 50px;
   font-size: 20px;
-    .btn {
-      margin-top: 5px;
-      background-color: #191996;
 
-    }
     table {
       margin-bottom: 0;
     }
@@ -202,7 +213,7 @@ margin: auto;
 #api_doc {
   float:right;
   margin-right: 10px;
-  margin-top:-80px;
+  margin-top:-39px;
   a { color: white;
     }
 }
@@ -222,4 +233,8 @@ margin: auto;
 
 #warnings {
   margin-top: 9px;
+}
+
+#headers {
+  outline-top: none;
 }

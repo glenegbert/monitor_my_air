@@ -2,12 +2,14 @@
 <div id="notifications-index">
   <h3> Your Notifications </h3>
 <table class="table">
-  <th> Name </th>
-  <th> Email </th>
-  <th> Phone Number </th>
-  <th> Zip Code </th>
-  <th> Health Concerns </th>
-  <th> Update </th>
+  <tr id="headers">
+    <th> Name </th>
+    <th> Email </th>
+    <th> Phone Number </th>
+    <th> Zip Code </th>
+    <th> Health Concerns </th>
+    <th> Update </th>
+  </tr>
   <% @notifications.each do |notification| %>
   <%= render :template => 'notifications/_table', :locals => { :notification => notification } %>
   <% end %>
