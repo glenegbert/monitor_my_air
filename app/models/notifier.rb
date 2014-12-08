@@ -12,7 +12,7 @@ class Notifier
   end
 
   def self.alerts?
-    !@report.health_effects?("today") || !@report.health_effects?("tomorrow")
+    @report.health_effects?("today") || @report.health_effects?("tomorrow")
   end
 
   def self.send_notification(notification)
